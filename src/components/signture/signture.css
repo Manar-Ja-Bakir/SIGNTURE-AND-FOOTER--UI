@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+.signture {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  letter-spacing: 1px;
+  overflow-x: hidden;
+}
+.signtureContainer {
+  position: relative;
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  background-color: transparent;
+}
+.signtureItem {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(248, 244, 252);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 25px;
+  align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+}
+.signtureItem div {
+  width: 100%;
+}
+.welcomeOverlay {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../../images/new2.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  z-index: 2;
+}
+.welcome {
+  color: whitesmoke;
+  padding: 1px;
+  display: flex;
+  margin-top: 150px;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  filter: drop-shadow(0 0 3px rgba(17, 17, 17, 0.245));
+}
+.welcome p {
+  width: 200px;
+  text-align: end;
+  color: #c8adf4;
+  margin-left: 30%;
+  font-size: 14px;
+  margin-top: 30px;
+}
+.welcomeOverlay .btn {
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcomeOverlay .btn .btnSignture {
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: transparent !important;
+  z-index: 10;
+}
+
+.btn .btnSignture:hover {
+  border: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+}
+.btn .btnSignture::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #472ea3;
+  position: absolute;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -12;
+  -moz-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+}
+
+.btn .btnSignture::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #822af6;
+  position: absolute;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -15;
+  -webkit-transition: all 0.94s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  -moz-transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  -o-transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+}
+.btn .btnSignture:hover::before,
+.btn .btnSignture:hover::before {
+  opacity: 1;
+  width: 116%;
+}
+.btn .btnSignture:hover::after,
+.btn .btnSignture:hover::after {
+  opacity: 1;
+  width: 120%;
+}
+.formCon {
+  width: 70%;
+}
+
+input[type="text"],
+[type="password"],
+[type="email"] {
+  outline: none;
+  /* border: none; */
+  background: none;
+  width: 100%;
+  height: 35px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to left,
+    rgb(195, 115, 227),
+    rgb(159, 117, 227),
+    rgb(111, 111, 237),
+    rgb(109, 44, 229)
+  );
+
+  padding: 10px;
+  padding-left: 22px;
+  color: rgb(22, 22, 22);
+  margin-bottom: 8px;
+  display: block;
+}
+.itemSign {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.iconSign {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: #5d5e5f;
+  font-size: 14px !important;
+}
+.signtureBtn {
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  width: 90%;
+  height: 40px;
+  background-color: #6c13fe;
+  font-size: 16px;
+  color: whitesmoke;
+  filter: drop-shadow(0 0 4px rgba(45, 39, 39, 0.4));
+  cursor: pointer;
+  transition: all 0.3s linear;
+  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.signtureBtn:hover {
+  background-color: #472ea3;
+  letter-spacing: 1.5px !important;
+}
+.HeaderSignture {
+  color: #472ea3;
+  font-size: 24px !important;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.error {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgb(226, 86, 86);
+  text-transform: capitalize;
+  margin-bottom: 4px;
+}
+
+.swapIn {
+  transform: translateX(100%);
+}
+.swapOut {
+  transform: translateX(-100%);
+}
+.NotHaveAcount {
+  color: #5d5e5f;
+  font-size: small;
+  text-align: center;
+}
+.NotHaveAcount a {
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  color: #6c13fe;
+}
+@media (max-width: 800px) {
+  .signture{
+    height: max-content;
+  }
+  .welcomeOverlay{
+   display: none;
+  }
+  .signtureContainer{
+    width:100vw;
+    height:max-content;
+    align-items: center; 
+    justify-content: center;
+    overflow-x: hidden;
+
+  }
+  .in{
+z-index: 0;
+  }
+  .signtureItem{
+position: fixed;
+top: 20px;
+
+    width:70vw;
+    height:90vh;
+    margin: 20px 0;
+    /* box-shadow: none; */
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.3);
+
+  }
+  .swapIn {
+   z-index: 1;
+
+  }
+  .swapOut {
+  z-index: 0;
+  }
+}
